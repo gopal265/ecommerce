@@ -1,0 +1,39 @@
+.full-width{
+    width: 100%;
+}
+.full-height{
+    height: 90vh;
+}
+.app-width{
+    width:100vw;
+    min-height: 100vh;
+    /* background-color: rgba(12, 188, 219,0.1); */
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-v{
+    display: flex;
+    align-items: center;
+}
+
+.center-v-sb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center-h{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* div{
+    border: 2px solid black;
+} */

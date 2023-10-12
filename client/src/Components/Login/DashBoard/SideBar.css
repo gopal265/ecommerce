@@ -1,0 +1,18 @@
+
+.sidebar-row{
+    padding: 20px 0px;
+}
+.sidebar-head{
+    font-size: 12px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+}
+
+.side-item{
+    font-size: 15px;
+    padding: 5px 0px;
+}
+
+ul{
+   list-style: none;
+}

@@ -1,0 +1,39 @@
+.ppage-brand{
+    font-size: 24px;
+    font-weight: 900;
+}
+.ppage-title{
+    font-size: 24px;
+    color: rgb(224, 219, 219);
+}
+
+.ppage-price{
+    font-size: 24px;
+    font-weight: 900;
+}
+.ppage-price-mrp{
+    color: rgb(224, 219, 219);
+    font-size: 24px;
+    font-weight: 900;
+}
+.ppage-price-discount{
+    color: rgb(212, 32, 92);
+    font-size: 24px;
+    font-weight: 900;
+}
+.ppage-tax{
+    font-size: 18px;
+    color: rgb(6, 216, 6);
+}
+
+.ppage-bag{
+    border: none;
+    background-color: rgb(212, 32, 92);
+}
+.ppage-wish{
+    border: 1px solid rgb(194, 192, 192);
+    background-color: white;
+}
+.ppage-image{
+    width: 100%;
+}

@@ -1,0 +1,16 @@
+.home-heading{
+    padding: 50px 0px;
+    text-transform: uppercase;
+}
+
+.home-img img{
+    height: auto;
+    width: 100%;
+}
+.gift{
+    padding: 0;
+}
+
+/* div{
+    border: 2px solid black;
+} */

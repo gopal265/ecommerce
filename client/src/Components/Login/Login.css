@@ -1,0 +1,48 @@
+.login-wrapper{
+    background-color: white;
+    height: fit-content;
+    max-width: 100%;
+    width: 400px;
+    
+}
+.login-head{
+    font-size: 20px;
+    font-weight: 600;
+}
+.small{
+    font-size: 16px;
+    font-weight: 300;
+}
+.login-email{
+    width: 100%;
+    outline:none;
+    border: 1px solid #d4d5d9;
+    font-size: 14px;
+    padding: 11px 12px;
+    line-height: 16px;
+    height: auto;
+    color: #282c3f;
+}
+
+.login-description{
+    font-size: 13px;
+    color: #20212b;
+    margin-bottom: 21px;
+}
+.login-button{
+    width: 100%;
+    text-align:center;
+    border:none;
+    padding: 12px;
+    font-size :14px;
+    text-transform:uppercase;
+    background-color: rgb(12, 188, 219);
+
+}
+.login-help{
+    color: rgb(12, 188, 219);
+}
+.otp-verify{
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,67 @@
+.overview-head{
+    padding: 15px 0px;
+}
+.overview-head h1{
+    font-size: 18px;
+    margin: 0;
+}
+.overview-head p{
+    font-size: 12px;
+    margin: 0;
+}
+
+hr{
+    margin: 0;
+}
+.overview-profile-wrapper{
+    border: 1px solid gray;
+    width: 90%;
+}
+@media only screen and (max-width: 768px) {
+    .overview-profile-wrapper{
+        width: 100%;
+    }
+}
+@media (min-width: 576px)
+{
+    .overview-wrapper {
+        width: 100%;
+    }
+}
+
+
+.overview-profile{
+    font-size: 18px;
+    padding: 0px 24px 24px;
+    font-weight: 600;
+
+}
+.horizontal{
+    width: 75%;
+}
+
+.profile-item{
+    font-size: 16px;
+    padding: 5px 0px;
+
+}
+.profile-details{
+    margin-top: 20px;
+}
+.profile-details td{
+    width: 200px;
+    height: 43px;
+    padding:0px 4px;
+    margin-top: 10px;
+
+    font-size: 16px
+}
+
+.sidebar{
+    padding-right: 20px;
+    border-right: 1px solid gray;
+}
+
+.edit-btn{
+    margin: 20px 0px 50px 0px;
+}

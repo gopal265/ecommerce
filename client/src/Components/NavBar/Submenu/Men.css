@@ -1,0 +1,43 @@
+/* Men.css */
+
+/* Style the wrapper container */
+.wrapper {
+    background-color: #fff; /* Set background color */
+    padding: 20px; /* Add some padding */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+  }
+  
+  /* Style the columns */
+  .nav-column {
+    padding: 20px; /* Add padding to each column */
+    border-right: 1px solid #eee; /* Add a right border to separate columns */
+    transition: background-color 0.3s ease; /* Add a smooth background color transition on hover */
+  }
+  
+  .nav-column:last-child {
+    border-right: none; /* Remove the right border for the last column */
+  }
+  
+  /* Style the subitems (h5 headings) */
+  .subitems {
+    font-size: 18px; /* Increase font size */
+    margin-bottom: 10px; /* Add some space below the headings */
+  }
+  
+  /* Style the list items (li elements) */
+  .data {
+    list-style: none; /* Remove bullet points */
+    margin: 5px 0; /* Add some margin between list items */
+    transition: color 0.3s ease; /* Add a smooth color transition on hover */
+  }
+  
+  /* Change the background color of columns and text color on hover */
+  .nav-column:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+  }
+  
+  .data:hover {
+    color: #007bff; /* Change text color on hover */
+  }
+  

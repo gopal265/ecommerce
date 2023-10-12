@@ -1,0 +1,58 @@
+.menu{
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(100, 100, 100, 0.21); /* The '35' in the class appears to represent alpha transparency (35%). */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+.CMenu{
+   
+        max-width: 100%; /* Adjust as needed for your specific design */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 480px;
+        background-color: white;
+
+
+      
+}
+.sub-items{
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Adjust as needed for your specific layout */
+        padding-left: 2rem; /* Adjust as needed for your specific design */
+        padding-right: 2rem; /* Adjust as needed for your specific design */
+        padding-top: 1rem; /* Adjust as needed for your specific design */
+        padding-bottom: 1rem; /* Adjust as needed for your specific design */
+        cursor: pointer;
+     
+}
+.sub-menu-items{
+    height: 418px;
+}
+.subitems{      
+      color: #0db7af; /* Use a meaningful class name instead of 'custom-color' */
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding-top: 0.25rem; /* Adjust the padding as needed. */
+      padding-bottom: 0.25rem;
+      
+}
+.data:hover{
+    
+            list-style: none;
+            padding-top: 0.5rem; /* Adjust as needed for your specific design */
+            padding-bottom: 0.5rem; /* Adjust as needed for your specific design */
+            font-weight: 300;
+            font-weight: 600;
+ 
+          }
+          
+      

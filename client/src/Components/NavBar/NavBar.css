@@ -1,0 +1,52 @@
+.navbar-icon{
+    padding: 0px 10px;
+    font-size: 20px;
+}
+.navbar-icon p{
+    font-size: 12px;
+    margin: 0px;
+}
+
+.nav-link{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navbar{
+    padding: 0px 50px;
+}
+
+.navbar-searchbar{
+  padding-right: 20px;
+}
+.navbar-searchbar input{
+  border: 1px solid rgb(192, 185, 185);
+  font-size: 16px;
+  padding: 5px;
+  width: 300px;
+  /* max-width: fit-content; */
+  outline: none;
+}
+
+.navbar-icon{
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+.block{
+  display: block;
+}
+.navbar-men{
+  position:absolute;
+  left: 50px;
+  top:50px;
+  z-index: 9;
+}
+
+/* div{
+  border: 1px solid black;
+} */
+
+  

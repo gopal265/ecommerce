@@ -1,0 +1,51 @@
+/* Order.css */
+
+.order-wrapper {
+    display: flex;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .order-img img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .order-details {
+    width: fit-content;
+  }
+  
+ .product-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: fit-content;
+  }
+  
+  .order-details .quantity {
+    margin-bottom: 5px;
+    width: fit-content;
+  }
+  
+  .order-details .payment-info {
+    margin-bottom: 5px;
+    color: #888;
+    width: fit-content;
+  }
+  
+  .order-details .status {
+    font-weight: bold;
+    width: fit-content;
+    
+  }
+  
+  .order-status {
+    font-style: italic;
+    color: #777;
+  }
+  
+  .order-head{
+    border: 1px solid #777;
+  }
