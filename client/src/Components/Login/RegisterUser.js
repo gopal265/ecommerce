@@ -3,11 +3,11 @@ import './Login.css'
 import { clearErrors, updateUser, getuser } from '../../actions/auth'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import {useForm} from 'react-hook-form'
+import {useForm} from "react-hook-form"
 import NavBar from '../NavBar/NavBar'
 
 const Registeruser = () => {
-    const redirect = useNavigate()
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const local_Email = localStorage.getItem('email').replace(/"/g, '');
     const { user, error } = useSelector(state => state.user)
@@ -29,7 +29,7 @@ const Registeruser = () => {
     if ( user.userName) {
         dispatch(getuser())
         console.log(user)
-        redirect('/dashboard')
+        navigate('/dashboard')
    }
     
     }, [ error, dispatch,user]);

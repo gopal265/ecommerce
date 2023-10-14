@@ -1,3 +1,11 @@
+.login-error{
+    font-size: 20px;
+    position: relative;
+}
+.close-error{
+    position: absolute;
+    right: 20px;
+}
 .login-wrapper{
     background-color: white;
     height: fit-content;
@@ -23,7 +31,10 @@
     height: auto;
     color: #282c3f;
 }
-
+.error{
+    color : red;
+    font-size: 14px;
+}
 .login-description{
     font-size: 13px;
     color: #20212b;

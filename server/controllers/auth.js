@@ -6,30 +6,6 @@ import { createToken } from "../utils/createToken.js";
 import errorhandler from "../utils/errorhandle.js";
 
 dotenv.config();
-// export const registerByMobile = RC(async (req, res, next) => {
-  
-//   const { phonenumber } = req.body
-
-//   console.log(phonenumber)
-//   const user = await User.findOne({"phonenumber": phonenumber})
-
-//   if (!user) {
-//     const newUser = await User.create({
-//       phonenumber,
-//     })
-   
-//   }
-
-//   const newUser = await User.findOne({"phonenumber": phonenumber})
-
-//   let otp = Math.floor((1 + Math.random()) * 90000)
-
-//   let options = { authorization: process.env.YOUR_API_KEY, message: `This Website is made by Vikas Verma Thank You to use my Website Your OTP: is ${otp}`, numbers: [phonenumber] }
-  
-//   sendMsg(options,res,req,next);
-  
-
-// })
 
 export const registerBYMail = RC(async (req,res,next) =>{
 
@@ -87,10 +63,15 @@ export const verifyOtp = RC(async (req, res, next)=>{
     const {otp} = req.body
     const user = await User.findOne({email: req.params.email})
     if (!user.otp) {
-      return next( new errorhandler("Your OTP has been expired or not has been genrated pls regenrate OTP", 400))
+      return  res.status(400).json({
+        error :"Your OTP has been expired or not has been genrated pls regenrate OTP"
+      })
+     
     }
     if (user.otp !== otp) {
-      return next( new errorhandler("You entered expire or wrong OTP", 400))
+      return res.status(400).json({
+        error : "You entered expire or wrong OTP"
+      })
     }
     if(otp === user.otp){
       user.verify = 'verified'
@@ -99,7 +80,6 @@ export const verifyOtp = RC(async (req, res, next)=>{
       if (user.userName) {
         createToken(user, 200, res)
       }else{
-        console.log('yes')
         res.status(200).json({
           success:true,
           user
@@ -110,17 +90,13 @@ export const verifyOtp = RC(async (req, res, next)=>{
 })
 
 export const resendOtp = RC(async (req, res, next)=>{
-  console.log(req.params.id)
+
   const {email} = req.params
   const user = await User.findOne({email})
   let otp = Math.floor((1 + Math.random()) * 90000)
   console.log(user, otp)
 
   sendEmail(email,otp,user,res)
-
-  res.status(200).json({
-    success:true
-  })
 
 })
 
@@ -131,7 +107,7 @@ export const updateUser =RC( async(req,res,next)=>{
   const user = await User.findOne({email: req.params.email})
 
   if(!user){
-    return next( new errorhandler('mobile incorrect', 400))
+    return next( new errorhandler('Email incorrect', 400))
   }
   
   createToken(user, 200, res)
@@ -157,20 +133,8 @@ const {firstName,lastName,userName, pincode, address1, address2, city, phoneNumb
 
 
   res.status(200).json({
-    success:'Address Update Successfully'
+    success:true,
+    message :'Address Update Successfully'
   })
   
-})
-
-
-export const logout = RC( async(req, res, next)=>{
-  
-  res.cookie('token', null,{
-    expire:new Date(Date.now()),
-    httpOnly:true
-});
-res.status(200).json({
-    success:true,
-    message:"Log Out sucessfully"
-})
 })

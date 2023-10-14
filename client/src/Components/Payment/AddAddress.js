@@ -3,7 +3,7 @@ import '../Login/Login.css'
 import { clearErrors, updateUser, getuser, updatedetailsuser } from '../../actions/auth'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import {useForm} from 'react-hook-form'
+import {useForm} from "react-hook-form"
 
 const AddAddress = ({task,changetask}) => {
     const redirect = useNavigate()

@@ -83,15 +83,13 @@ export const verifyOtp = (otp) => async (dispatch) => {
         const email = localStorage.getItem('email').replace(/"/g, '')
         
 
-        console.log(email)
         const { data } = await api.verifyOtp(email,otp)
-        console.log(data)
 
         dispatch({ type: SUCCESS_VERIFY_OTP, payload: data.user })
 
     } catch (error) {
       
-        dispatch({ type: FAIL_VERIFY_OTP, payload: error.response.data.message })
+        dispatch({ type: FAIL_VERIFY_OTP, payload: "Wrong Otp" })
 
     }
 }
@@ -103,14 +101,15 @@ export const resendotp = () => async (dispatch) => {
         dispatch({ type: REQUEST_RESEND_OTP })
         const mobile = JSON.parse(localStorage.getItem('mobileno'))
         const mobileno = Number(mobile.phonenumber)
+        const email = localStorage.getItem("email").replace(/"/g,'')
 
-        const { data } = await axios.get(`/api/v1/resendotp/${mobileno}`)
+        const { data } = await api.resendOtp(email)
 
-        dispatch({ type: SUCCESS_RESEND_OTP, payload: data.success })
+        dispatch({ type: SUCCESS_RESEND_OTP, payload: data.success,message:`Email sent to ${email}` })
 
     } catch (Error) {
     
-        dispatch({ type: FAIL_RESEND_OTP, payload: Error.response.data.message })
+        dispatch({ type: FAIL_RESEND_OTP, payload:"Unable to send Email" })
 
     }
 }

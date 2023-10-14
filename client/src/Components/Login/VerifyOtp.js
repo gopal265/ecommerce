@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import './Login.css'
-import { verifyOtp, resendotp, getuser } from '../../actions/auth'
+import { verifyOtp, resendotp, getuser ,clearErrors} from '../../actions/auth'
 import { useSelector, useDispatch } from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 
@@ -13,23 +13,15 @@ const VerifyOtp = () => {
   const email = localStorage.getItem("email")
   const dispatch = useDispatch()
   const { user, error, loading } = useSelector(state => state.userdetails)
+  const {error:resendError} = useSelector(state => state.resendotp)
 
 
   const continues = (e) => {
     e.preventDefault();
-    const myForm = {
+    const data = {
       otp: Number(otp)
     }
-
-    dispatch(verifyOtp(myForm))
-  
-    if (error) {
-      let par = document.getElementById('error')
-      par.innerHTML = error
-    }
-  
-   
-    
+    dispatch(verifyOtp(data)) 
   }
 
   const Resndotp = () =>{
@@ -62,6 +54,24 @@ const VerifyOtp = () => {
   return (
 
     <Fragment>
+         {  error &&
+         <div class="alert alert-danger center login-error" role="alert" id=''>
+         {error}
+         <div className='center close-error' onClick={()=> dispatch(clearErrors())}>
+         <i class="fa-solid fa-xmark" ></i>
+         </div>
+
+       </div>
+      }
+         {  resendError &&
+         <div class="alert alert-danger center login-error" role="alert" id=''>
+         {resendError}
+         <div className='center close-error' onClick={()=> dispatch(clearErrors())}>
+         <i class="fa-solid fa-xmark" ></i>
+         </div>
+         
+       </div>
+      }
       <form
         encType="multipart/form-data"
         onSubmit={continues}

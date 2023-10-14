@@ -1,10 +1,7 @@
-import React, { Fragment } from 'react'
-// import Footer from '../../Footer/Footer'
-import { SUCCESS_LOGOUT } from '../../../constants/userConstants'
+import React from 'react'
 import "./OverView.css"
 import Sidebar from './SideBar'
 import NavBar from '../../NavBar/NavBar'
-import {logout} from '../../../actions/auth'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 const Overview = ({user}) => {
@@ -15,7 +12,7 @@ const Overview = ({user}) => {
     navigate('/')
   }
   return (
-    <Fragment>
+    <>
       <NavBar />
       { user &&
       <div className='overview-wrapper container p-5'>
@@ -95,10 +92,9 @@ const Overview = ({user}) => {
 
       </div>
 }
-      {/* 
-          <Footer/> */}
+   
 
-    </Fragment>
+    </>
 
   )
 }

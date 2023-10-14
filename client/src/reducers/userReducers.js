@@ -178,30 +178,17 @@ switch (action.type) {
     case SUCCESS_RESEND_OTP:
         return {
             loading: false,
-            success: action.payload
+            success: action.payload,
+            message : action.message
         };
 
     case FAIL_RESEND_OTP:
         
             return {
                 loading: false,
+                error:action.payload
             };
     
-    case CLEAR_ERRORS:
-                return {
-                    ...state,
-                    error: null
-            };
-
-    default:
-        return state;
-}
-}
-
-export const updateuser = (state = {user:{}}, action) =>{
-switch (action.type) {
-    
-     
     case CLEAR_ERRORS:
                 return {
                     ...state,

@@ -31,7 +31,7 @@ const sendEmail = async (email,otp,user,res,type='') => {
         await user.save({ validateBeforeSave: false })
         res.status(200).json({message:"OTP send to the mail",success:true,user})
     } catch (error) {
-       res.status(400).json({success:false})
+       res.status(404).json({success:false,error:"Unable to send the mail"})
     }
 };
 export default   sendEmail;

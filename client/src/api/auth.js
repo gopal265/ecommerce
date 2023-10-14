@@ -6,6 +6,8 @@ export const registerMail =(email) => axios.post(`${base_url}/registerbymail`,em
 
 export const verifyOtp = (email,otp) => axios.post(`${base_url}/${email.toString()}/verifyotp`,otp)
 
+export const resendOtp = (email) => axios.post(`${base_url}/${email}/resendotp`)
+
 export const updateUser = (email,data) => axios.patch(`${base_url}/${email}/updateuser`,data)
 
 export const updateUserDetails = (email,data) => axios.patch(`${base_url}/${email}/updateuserdetails`,data)
