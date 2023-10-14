@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const base_url = "http://localhost:5000/auth";
+const base_url = "https://shopcartbackend-vj0i.onrender.com/auth";
 
 export const registerMail =(email) => axios.post(`${base_url}/registerbymail`,email);
 

@@ -1,6 +1,6 @@
 import axios  from "axios";
 
-const base_url = "http://localhost:5000/order"
+const base_url = "https://shopcartbackend-vj0i.onrender.com/order"
 
 export const createWish =(data)=> axios.post(`${base_url}/createwish`,data)
 
